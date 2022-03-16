@@ -20,4 +20,13 @@ export class ElementosService {
   ];
 
   constructor() { }
+
+  addElemento(elemento: Elementos) {
+    this.elementos.push(elemento);
+  }
+
+  getElementos() {
+    return this.elementos;
+  }
+
 }

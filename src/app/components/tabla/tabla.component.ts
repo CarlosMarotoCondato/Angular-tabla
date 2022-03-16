@@ -24,7 +24,7 @@ export class TablaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.elementos=this.elementosService.elementos;
+    this.elementos=this.elementosService.getElementos();
     console.log(this.elementos);
   }
 
