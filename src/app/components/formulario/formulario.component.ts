@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
+  nombre:string;
+  peso:string;
+  simbolo:string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

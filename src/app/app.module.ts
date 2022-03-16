@@ -7,6 +7,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
 
 
 
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablaComponent } from './components/tabla/tabla.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { ElementosService } from './services/elementos.service'
 
 
 
@@ -32,9 +34,10 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
-  providers: [],
+  providers: [ElementosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

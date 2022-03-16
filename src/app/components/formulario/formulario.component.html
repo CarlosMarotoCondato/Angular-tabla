@@ -1,7 +1,18 @@
-<form>
-    <mat-form-field appearance="fill">
-        <mat-label>Input</mat-label>
-        <input matInput>
+
+    <mat-form-field class="campos" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="nombre">
     </mat-form-field>
-</form>
+
+    <mat-form-field class="campos" appearance="fill">
+        <mat-label>Peso</mat-label>
+        <input matInput [(ngModel)]="peso">
+    </mat-form-field>
+
+    <mat-form-field class="campos" appearance="fill">
+        <mat-label>Simbolo</mat-label>
+        <input matInput [(ngModel)]="simbolo">
+    </mat-form-field>
+
+    <button mat-stroked-button>Añadir</button>
     
