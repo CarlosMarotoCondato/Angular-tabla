@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Elementos } from './elemento'
+import { Elementos } from './elemento';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,10 @@ export class ElementosService {
 
   getElementos() {
     return this.elementos;
+  }
+
+  recargarElementos(){
+    return 
   }
 
 }

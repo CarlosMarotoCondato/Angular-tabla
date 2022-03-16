@@ -6,7 +6,8 @@
 
 <main>
   
-  <app-formulario></app-formulario>
-  <app-tabla></app-tabla>
+  <app-formulario (newItemEvent)="addItem($event)"></app-formulario>
+  <app-tabla *ngIf="booleano" ></app-tabla>
+  <app-tabla *ngIf="!booleano" ></app-tabla>
 
 </main>

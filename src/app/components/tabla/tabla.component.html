@@ -4,7 +4,9 @@
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
   </mat-form-field>
   
-  <table mat-table [dataSource]="elementos" class="mat-elevation-z8">
+  <button (click)="recargar()">RecargarTabla</button>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
     <!-- Position Column -->
     <ng-container matColumnDef="posicion">

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-tabla';
+
+  booleano:boolean;
+
+  addItem(newItem: string) {
+    this.booleano = !this.booleano;
+  }
 }

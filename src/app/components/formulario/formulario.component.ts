@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Elementos } from '../../services/elemento';
 import { ElementosService } from '../../services/elementos.service';
 
@@ -15,23 +15,32 @@ export class FormularioComponent implements OnInit {
   nElementos:number;
   elemento:Elementos
 
+  @Output() newItemEvent = new EventEmitter<string>();
+
   constructor(private elementosService: ElementosService) { }
 
   ngOnInit(): void {
   }
+
+  
 
   anadir(){
 
     this.nElementos = 1 + this.elementosService.getElementos().length;
 
     this.elemento  = {posicion : this.nElementos, nombre: this.nombre, peso: this.peso, simbolo: this.simbolo};
-    console.log(this.nombre);
-    console.log(this.peso);
-    console.log(this.simbolo);
 
     this.elementosService.addElemento(this.elemento);
-    this.table.renderRows();
+    this.elementosService.recargarElementos();
+    console.log(this.elementosService.getElementos());
+    this.addNewItem("");
 
   };
+
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
+  }
+
+  
 
 }
