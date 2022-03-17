@@ -22,8 +22,6 @@ export class FormularioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
-
   anadir(){
 
     this.nElementos = 1 + this.elementosService.getElementos().length;

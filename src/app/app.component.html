@@ -1,3 +1,5 @@
+<div class="">
+
 <header>
     <mat-toolbar class="navegador">
       <h3> Aplicacion tabla de elementos </h3>
@@ -7,7 +9,20 @@
 <main>
   
   <app-formulario (newItemEvent)="addItem($event)"></app-formulario>
-  <app-tabla *ngIf="booleano" ></app-tabla>
-  <app-tabla *ngIf="!booleano" ></app-tabla>
+
+  <div class=" flex flex-row ">
+  
+    <div class="basis-1 md:basis-1/2" >
+      <app-tabla *ngIf="booleano" ></app-tabla>
+      <app-tabla *ngIf="!booleano" ></app-tabla>
+    </div>
+    <div class="basis-1 md:basis-1/2" >
+      <app-tabla *ngIf="booleano" ></app-tabla>
+      <app-tabla *ngIf="!booleano" ></app-tabla>
+    </div>
+
+  </div>
 
 </main>
+
+</div>

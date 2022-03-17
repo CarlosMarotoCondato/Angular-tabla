@@ -32,7 +32,6 @@ export class TablaComponent implements OnInit {
     this.elementos=this.elementosService.getElementos();
     this.dataSource = new MatTableDataSource<Elementos>(this.elementos)
   }
-  
 
   displayedColumns: string[] = ['posicion', 'nombre', 'peso', 'simbolo'];
   dataSource = new MatTableDataSource<Elementos>(this.elementos);

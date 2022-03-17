@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 
 // ***********    Componentes    ******************
@@ -34,7 +36,8 @@ import { ElementosService } from './services/elementos.service'
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule
   ],
   providers: [ElementosService],
   bootstrap: [AppComponent]
